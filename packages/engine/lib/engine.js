@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-module.exports = engine;
+module.exports = engine
 
 function engine() {
     // TODO

@@ -5,7 +5,7 @@
             "@/*": ["src/*"],
             "@utils/*": ["src/utils/*"],
             "@components/*": ["src/components/*"],
-            "@assets/*": ["src/assets/*"],
+            "@assets/*": ["src/assets/*"]
         },
         "outDir": "./dist/",
         "sourceMap": true,
@@ -15,20 +15,10 @@
         "jsx": "react",
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
-        "lib": [
-            "dom",
-            "dom.iterable",
-            "esnext"
-        ],
+        "lib": ["dom", "dom.iterable", "esnext"],
         "allowJs": true,
         "experimentalDecorators": true
     },
-    "include": [
-        "src"
-    ],
-    "exclude": [
-        "node_modules",
-        "**/*.spec.ts",
-        "scripts"
-    ]
+    "include": ["src"],
+    "exclude": ["node_modules", "**/*.spec.ts", "scripts"]
 }
