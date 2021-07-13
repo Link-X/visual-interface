@@ -7,21 +7,21 @@ module.exports = {
         // "plugin:@typescript-eslint/eslint-recommended",
         // "plugin:@typescript-eslint/recommended",
         'standard-with-typescript',
-        'plugin:react/recommended'
+        'eslint:recommended',
+        'plugin:react/recommended',
+        'plugin:node/recommended',
+        'plugin:@typescript-eslint/recommended',
         // "prettier", // 暂时不开启prettier的eslint规则
         // "prettier/@typescript-eslint",
         // "prettier/react"
     ],
     parserOptions: {
         sourceType: 'module',
-	ecmaVersion: 2020,
-        ecmaFeatures: {
-            jsx: true
-        },
+        ecmaVersion: 2020,
     },
     env: {
         es6: true,
-        node: true
+        node: true,
     },
     rules: {
         '@typescript-eslint/no-var-requires': 0,
@@ -33,13 +33,6 @@ module.exports = {
         '@typescript-eslint/require-await': 'warn',
         '@typescript-eslint/no-floating-promises': ['warn'],
         '@typescript-eslint/no-empty-function': ['warn'],
-        '@typescript-eslint/strict-boolean-expressions': [
-            'warn',
-            {
-                allowNullable: false,
-                ignoreRhs: true
-            }
-        ],
         '@typescript-eslint/consistent-type-assertions': 0,
         '@typescript-eslint/require-await': 0,
         'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
@@ -49,10 +42,9 @@ module.exports = {
             {
                 anonymous: 'never',
                 named: 'never',
-                asyncArrow: 'always'
-            }
+                asyncArrow: 'always',
+            },
         ],
-        'generator-star-spacing': ['error', { before: false, after: true }]
-    }
+        'generator-star-spacing': ['error', { before: false, after: true }],
+    },
 }
-

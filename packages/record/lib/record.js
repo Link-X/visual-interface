@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-module.exports = record;
+module.exports = record
 
-function record() {
+function record(a) {
     // TODO
 }

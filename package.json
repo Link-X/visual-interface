@@ -5,16 +5,16 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .jsx,.js,.tsx,.ts src/",
-    "lint:fix": "eslint --ext .jsx,.js,.tsx,.ts src/ --fix",
-    "prettier": "prettier --write 'src/**/*.{js,ts,jsx,tsx}'"
+    "lint": "eslint --ext .jsx,.js,.tsx,.ts packages/*/src/**",
+    "format": "prettier --write ."
   },
   "workspaces": [
     "packages/*"
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "node scripts/verifyCommit.js"
     }
   },
   "lint-staged": {
