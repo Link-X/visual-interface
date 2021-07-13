@@ -1,0 +1,28 @@
+{
+  "name": "page-base",
+  "version": "0.0.1",
+  "description": "page-base",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=dev port=9101 node cli/start.js",
+    "build": "cross-env NODE_ENV=production webpack --config scripts/webpack/webpack.prod.config.js",
+    "analyzer": "yarn build --analyzer",
+    "css:lint": "stylelint 'src/**/*.css' 'src/**/*.less'",
+    "css:fix": "stylelint 'src/**/*.css' 'src/**/*.less' --fix",
+    "lint": "eslint --ext .jsx,.js,.tsx,.ts src/",
+    "lint:fix": "eslint --ext .jsx,.js,.tsx,.ts src/ --fix",
+    "prettier": "prettier --write 'src/**/*.{js,ts,jsx,tsx}'"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "bin": {
+    "bfcli": "bin/index.js"
+  },
+  "author": "page-base",
+  "license": "ISC",
+  "homepage": "",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  }
+}
