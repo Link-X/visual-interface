@@ -6246,7 +6246,7 @@ html-escaper@^2.0.0:
   resolved "https://registry.npm.taobao.org/html-escaper/download/html-escaper-2.0.2.tgz?cache=0&sync_timestamp=1613643585723&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhtml-escaper%2Fdownload%2Fhtml-escaper-2.0.2.tgz#dfd60027da36a36dfcbe236262c00a5822681453"
   integrity sha1-39YAJ9o2o238viNiYsAKWCJoFFM=
 
-html-loader@0.5.5:
+html-loader@^0.5.5:
   version "0.5.5"
   resolved "https://registry.npm.taobao.org/html-loader/download/html-loader-0.5.5.tgz?cache=0&sync_timestamp=1615303698934&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhtml-loader%2Fdownload%2Fhtml-loader-0.5.5.tgz#6356dbeb0c49756d8ebd5ca327f16ff06ab5faea"
   integrity sha1-Y1bb6wxJdW2OvVyjJ/Fv8Gq1+uo=
