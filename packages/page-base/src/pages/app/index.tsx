@@ -3,7 +3,7 @@ import React from 'react'
 import { renderRoutes } from 'react-router-config'
 
 const Index = (props) => {
-    console.log(props)
+    console.log(props, e)
     return <div className="big-data_box">{renderRoutes(props.route.routes)}</div>
 }
 
