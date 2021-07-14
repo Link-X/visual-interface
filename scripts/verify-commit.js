@@ -9,7 +9,6 @@ const releaseRE = /^v\d/
 const commitRE = /^(revert: )?(feat|fix|docs|dx|refactor|perf|test|workflow|build|ci|chore|types|wip|release|deps)(\(.+\))?: .{1,50}/
 
 if (!releaseRE.test(msg) && !commitRE.test(msg)) {
-    console.log()
     console.error(`代码提交不规范\n` + `feat: 新增\n` + `fix: 修改bug\n` + `docs: 文档\n`)
     process.exit(1)
 }
