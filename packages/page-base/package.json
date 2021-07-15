@@ -1,6 +1,6 @@
 {
     "name": "@visual-interface/page-base",
-    "version": "0.0.2",
+    "version": "0.0.9",
     "description": "page-base",
     "main": "index.js",
     "scripts": {
