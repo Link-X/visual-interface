@@ -1,6 +1,6 @@
 {
     "name": "@visual-interface/engine",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "god god",
     "keywords": [],
     "author": "xudb <15555537368@163.com>",
@@ -13,7 +13,6 @@
     "files": [
         "lib"
     ],
-
     "publishConfig": {
         "access": "public",
         "registry": "https://registry.npmjs.org"
