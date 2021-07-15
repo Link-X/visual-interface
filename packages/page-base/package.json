@@ -88,12 +88,12 @@
     "bin": {
         "bfcli": "bin/index.js"
     },
-    "author": "page-base",
+    "author": "xudb <15555537368@163.com>",
     "license": "ISC",
     "homepage": "",
     "directories": {
         "lib": "lib",
         "test": "__tests__"
     },
-    "gitHead": "738ce53577c9901a0e90968ec4ea6c9cdf1bc912"
+    "gitHead": "2760a0c4ec08fa285cb092951cf6169c88feb9d9"
 }
