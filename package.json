@@ -13,7 +13,10 @@
     "packages/*"
   ],
   "husky": {
-
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "node scripts/verify-commit.js"
+    }
   },
   "lint-staged": {
     "!(*test).(j|t)s?(x)": [
