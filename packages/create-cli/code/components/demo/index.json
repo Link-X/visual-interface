@@ -1,0 +1,22 @@
+{
+  "data": {
+    "fieldType": "Input",
+    "fieldLabel": "输入框单行",
+    "fieldOrder": 0,
+    "fieldKey": "",
+    "fieldRequired": true,
+    "showEdit": false,
+    "fieldDesc": "题目",
+    "fieldTypeName": "输入框单行",
+    "fieldProperties": {
+      "titleColor": "",
+      "titleSize": 16,
+      "showType": false
+    },
+    "fieldOption": {
+      "type": "any"
+    }
+  }
+}
+
+

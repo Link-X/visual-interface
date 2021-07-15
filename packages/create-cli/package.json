@@ -1,0 +1,44 @@
+{
+  "name": "create-design-cli",
+  "version": "0.1.6",
+  "keywords": [
+    "cb"
+  ],
+  "description": "create form comment",
+  "repository": {
+    "type": "git",
+    "url": "",
+    "directory": ""
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "files": [
+    "index.js",
+    "create-form-builder.js",
+    "code"
+  ],
+  "bin": {
+    "create-design-cli": "index.js"
+  },
+  "scripts": {},
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.0.0",
+    "ora": "^5.4.0",
+    "single-line-log": "^1.1.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  },
+  "author": "xudb <15555537368@163.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/create-design-cli.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  }
+}
