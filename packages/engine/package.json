@@ -1,6 +1,6 @@
 {
     "name": "@visual-interface/engine",
-    "version": "0.0.4",
+    "version": "0.0.1",
     "description": "god god",
     "keywords": [],
     "author": "xudb <15555537368@163.com>",
@@ -71,5 +71,5 @@
     "peerDependencies": {
         "react": ">=17.0.2"
     },
-    "gitHead": "e4d0e6f808f282d4890bd56fd60f3aa601123a71"
+    "gitHead": "738ce53577c9901a0e90968ec4ea6c9cdf1bc912"
 }

@@ -1,6 +1,6 @@
 {
   "name": "@visual-interface/create-design-cli",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "keywords": [
     "cb"
   ],
@@ -41,5 +41,5 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "gitHead": "e4d0e6f808f282d4890bd56fd60f3aa601123a71"
+  "gitHead": "738ce53577c9901a0e90968ec4ea6c9cdf1bc912"
 }

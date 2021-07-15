@@ -1,6 +1,6 @@
 {
   "name": "@visual-interface/server",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
   "keywords": [],
   "author": "xudb <15555537368@163.com>",
@@ -19,5 +19,5 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "gitHead": "e4d0e6f808f282d4890bd56fd60f3aa601123a71"
+  "gitHead": "738ce53577c9901a0e90968ec4ea6c9cdf1bc912"
 }
