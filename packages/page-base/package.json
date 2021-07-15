@@ -1,6 +1,6 @@
 {
     "name": "page-base",
-    "version": "0.0.1",
+    "version": "0.0.2-alpha.0",
     "description": "page-base",
     "main": "index.js",
     "scripts": {
@@ -85,7 +85,6 @@
         "webpack-hot-middleware": "^2.25.0",
         "yargs": "^17.0.1"
     },
-    "devDependencies": {},
     "bin": {
         "bfcli": "bin/index.js"
     },
