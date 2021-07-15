@@ -95,5 +95,8 @@
         "lib": "lib",
         "test": "__tests__"
     },
-    "gitHead": "4bc16d9b39a0017e80c42d6795a77c1d112d98c2"
+    "publishConfig": {
+        "access": "public"
+    },
+    "gitHead": "4a1a44a7a288e170b5791184ea3733f2635d2cc7"
 }

@@ -13,7 +13,9 @@
     "files": [
         "lib"
     ],
+
     "publishConfig": {
+        "access": "public",
         "registry": "https://registry.npmjs.org"
     },
     "scripts": {
@@ -71,5 +73,5 @@
     "peerDependencies": {
         "react": ">=17.0.2"
     },
-    "gitHead": "4bc16d9b39a0017e80c42d6795a77c1d112d98c2"
+    "gitHead": "4a1a44a7a288e170b5791184ea3733f2635d2cc7"
 }
