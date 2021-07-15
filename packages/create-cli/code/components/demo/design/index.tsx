@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react'
+/* eslint-disable */
+import React from 'react'
 
 import { Input, Switch, Select } from 'antd'
 
@@ -53,4 +54,4 @@ const EditInput = (props) => {
 }
 
 export default EditInput
-
+/* eslint-disable no-new */

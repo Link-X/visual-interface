@@ -36,7 +36,7 @@
   "author": "xudb <15555537368@163.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/create-design-cli.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"

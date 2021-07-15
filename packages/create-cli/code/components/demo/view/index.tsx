@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react'
 
 import { Input } from 'antd'
@@ -17,3 +18,4 @@ const FormInput = (props) => {
 
 export default FormInput
 
+/* eslint-disable no-new */

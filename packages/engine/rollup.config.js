@@ -25,20 +25,20 @@ const moduleDatas = {
     esm: {
         output: {
             format: 'esm',
-            file: resolve('./dist/esm')
+            dir: resolve('./dist/esm')
         }
     },
     umd: {
         output: {
             format: 'umd',
-            file: resolve('./dist/umd'),
+            dir: resolve('./dist/umd'),
             name: 'CbQueSys'
         }
     },
     cjs: {
         output: {
             format: 'cjs',
-            file: resolve('./dist/cjs')
+            dir: resolve('./dist/cjs')
         }
     }
 }
