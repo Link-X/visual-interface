@@ -1,5 +1,5 @@
 {
-    "name": "engine",
+    "name": "@visual-interface/engine",
     "version": "0.0.2-alpha.0",
     "description": "god god",
     "keywords": [],
@@ -70,5 +70,6 @@
     },
     "peerDependencies": {
         "react": ">=17.0.2"
-    }
+    },
+    "gitHead": "c433db962e8b813120974e7560f4d45c26cc8b55"
 }

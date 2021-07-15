@@ -1,5 +1,5 @@
 {
-  "name": "create-design-cli",
+  "name": "@visual-interface/create-design-cli",
   "version": "0.0.2-alpha.0",
   "keywords": [
     "cb"
@@ -40,5 +40,6 @@
   "directories": {
     "lib": "lib",
     "test": "__tests__"
-  }
+  },
+  "gitHead": "c433db962e8b813120974e7560f4d45c26cc8b55"
 }
