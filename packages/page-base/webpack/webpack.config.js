@@ -55,7 +55,7 @@ module.exports = (webpackOptions) => {
             rules: [
                 {
                     test: /.(j|t)s(x)?$/,
-                    include: [resolve('src')],
+                    include: [resolve('src'),resolve('../engine/dist/esm/index.js')],
                     use: [
                         cacheLoader,
                         {

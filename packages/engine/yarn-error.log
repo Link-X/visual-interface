@@ -52,11 +52,10 @@ npm manifest:
           "build:cjs": "cross-env NODE_ENV=production rollup -c --environment MODULE:cjs"
       },
       "dependencies": {
+          "immer": "^9.0.5",
           "react": "^17.0.2",
           "react-grid-layout": "^1.2.5",
-          "use-immer": "^0.6.0",
-          "immer": "^9.0.5",
-          "use-subscription": "1.5.1"
+          "use-immer": "^0.6.0"
       },
       "browserslist": [
           "> 1%",
@@ -75,8 +74,8 @@ npm manifest:
           "@rollup/plugin-alias": "^3.1.1",
           "@rollup/plugin-node-resolve": "^8.0.0",
           "@types/react": "^17.0.14",
-          "@typescript-eslint/eslint-plugin": "3.1.0",
-          "@typescript-eslint/parser": "3.1.0",
+          "@typescript-eslint/eslint-plugin": "^4.28.3",
+          "@typescript-eslint/parser": "^4.28.3",
           "babel-plugin-external-helpers": "^6.22.0",
           "babel-preset-latest": "^6.24.1",
           "core-js": "^3.15.2",
@@ -102,10 +101,9 @@ npm manifest:
           "typescript-eslint": "0.0.1-alpha.0"
       },
       "peerDependencies": {
-          "react": ">=17.0.2",
-          "use-immer": ">=0.6.0",
           "immer": ">=9.0.5",
-          "use-subscription": ">=1.5.1"
+          "react": ">=17.0.2",
+          "use-immer": ">=0.6.0"
       },
       "gitHead": "4a1a44a7a288e170b5791184ea3733f2635d2cc7"
   }
@@ -2503,11 +2501,6 @@ Lockfile:
     dependencies:
       "@babel/types" "^7.3.0"
   
-  "@types/eslint-visitor-keys@^1.0.0":
-    version "1.0.0"
-    resolved "https://registry.nlark.com/@types/eslint-visitor-keys/download/@types/eslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"
-    integrity sha1-HuMNeVRMqE1o1LPNsK9PIFZj3S0=
-  
   "@types/estree@*":
     version "0.0.50"
     resolved "https://registry.nlark.com/@types/estree/download/@types/estree-0.0.50.tgz?cache=0&sync_timestamp=1625598996573&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Festree%2Fdownload%2F%40types%2Festree-0.0.50.tgz#1e0caa9364d3fccd2931c3ed96fdbeaa5d4cca83"
@@ -2571,7 +2564,7 @@ Lockfile:
     dependencies:
       "@types/istanbul-lib-report" "*"
   
-  "@types/json-schema@^7.0.3", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.7":
+  "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.7":
     version "7.0.8"
     resolved "https://registry.nlark.com/@types/json-schema/download/@types/json-schema-7.0.8.tgz#edf1bf1dbf4e04413ca8e5b17b3b7d7d54b59818"
     integrity sha1-7fG/Hb9OBEE8qOWxezt9fVS1mBg=
@@ -2727,17 +2720,6 @@ Lockfile:
     dependencies:
       "@types/yargs-parser" "*"
   
-  "@typescript-eslint/eslint-plugin@3.1.0":
-    version "3.1.0"
-    resolved "https://registry.nlark.com/@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-3.1.0.tgz?cache=0&sync_timestamp=1626110455011&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Feslint-plugin%2Fdownload%2F%40typescript-eslint%2Feslint-plugin-3.1.0.tgz#4ac00ecca3bbea740c577f1843bc54fa69c3def2"
-    integrity sha1-SsAOzKO76nQMV38YQ7xU+mnD3vI=
-    dependencies:
-      "@typescript-eslint/experimental-utils" "3.1.0"
-      functional-red-black-tree "^1.0.1"
-      regexpp "^3.0.0"
-      semver "^7.3.2"
-      tsutils "^3.17.1"
-  
   "@typescript-eslint/eslint-plugin@^4.28.3", "@typescript-eslint/eslint-plugin@^4.5.0":
     version "4.28.3"
     resolved "https://registry.nlark.com/@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-4.28.3.tgz?cache=0&sync_timestamp=1626110455011&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Feslint-plugin%2Fdownload%2F%40typescript-eslint%2Feslint-plugin-4.28.3.tgz#36cdcd9ca6f9e5cb49b9f61b970b1976708d084b"
@@ -2751,16 +2733,6 @@ Lockfile:
       semver "^7.3.5"
       tsutils "^3.21.0"
   
-  "@typescript-eslint/experimental-utils@3.1.0":
-    version "3.1.0"
-    resolved "https://registry.nlark.com/@typescript-eslint/experimental-utils/download/@typescript-eslint/experimental-utils-3.1.0.tgz?cache=0&sync_timestamp=1626110454372&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Fexperimental-utils%2Fdownload%2F%40typescript-eslint%2Fexperimental-utils-3.1.0.tgz#2d5dba7c2ac2a3da3bfa3f461ff64de38587a872"
-    integrity sha1-LV26fCrCo9o7+j9GH/ZN44WHqHI=
-    dependencies:
-      "@types/json-schema" "^7.0.3"
-      "@typescript-eslint/typescript-estree" "3.1.0"
-      eslint-scope "^5.0.0"
-      eslint-utils "^2.0.0"
-  
   "@typescript-eslint/experimental-utils@4.28.3":
     version "4.28.3"
     resolved "https://registry.nlark.com/@typescript-eslint/experimental-utils/download/@typescript-eslint/experimental-utils-4.28.3.tgz?cache=0&sync_timestamp=1626110454372&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Fexperimental-utils%2Fdownload%2F%40typescript-eslint%2Fexperimental-utils-4.28.3.tgz#976f8c1191b37105fd06658ed57ddfee4be361ca"
@@ -2772,16 +2744,6 @@ Lockfile:
       "@typescript-eslint/typescript-estree" "4.28.3"
       eslint-scope "^5.1.1"
       eslint-utils "^3.0.0"
-  
-  "@typescript-eslint/parser@3.1.0":
-    version "3.1.0"
-    resolved "https://registry.nlark.com/@typescript-eslint/parser/download/@typescript-eslint/parser-3.1.0.tgz?cache=0&sync_timestamp=1626110455358&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Fparser%2Fdownload%2F%40typescript-eslint%2Fparser-3.1.0.tgz#9c02ba5d88ad2355672f39e6cd4176f172dd47f8"
-    integrity sha1-nAK6XYitI1VnLznmzUF28XLdR/g=
-    dependencies:
-      "@types/eslint-visitor-keys" "^1.0.0"
-      "@typescript-eslint/experimental-utils" "3.1.0"
-      "@typescript-eslint/typescript-estree" "3.1.0"
-      eslint-visitor-keys "^1.1.0"
   
   "@typescript-eslint/parser@^4.0.0", "@typescript-eslint/parser@^4.28.3", "@typescript-eslint/parser@^4.5.0":
     version "4.28.3"
@@ -2805,19 +2767,6 @@ Lockfile:
     version "4.28.3"
     resolved "https://registry.nlark.com/@typescript-eslint/types/download/@typescript-eslint/types-4.28.3.tgz#8fffd436a3bada422c2c1da56060a0566a9506c7"
     integrity sha1-j//UNqO62kIsLB2lYGCgVmqVBsc=
-  
-  "@typescript-eslint/typescript-estree@3.1.0":
-    version "3.1.0"
-    resolved "https://registry.nlark.com/@typescript-eslint/typescript-estree/download/@typescript-eslint/typescript-estree-3.1.0.tgz?cache=0&sync_timestamp=1626110454920&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Ftypescript-estree%2Fdownload%2F%40typescript-eslint%2Ftypescript-estree-3.1.0.tgz#eaff52d31e615e05b894f8b9d2c3d8af152a5dd2"
-    integrity sha1-6v9S0x5hXgW4lPi50sPYrxUqXdI=
-    dependencies:
-      debug "^4.1.1"
-      eslint-visitor-keys "^1.1.0"
-      glob "^7.1.6"
-      is-glob "^4.0.1"
-      lodash "^4.17.15"
-      semver "^7.3.2"
-      tsutils "^3.17.1"
   
   "@typescript-eslint/typescript-estree@4.28.3":
     version "4.28.3"
@@ -6389,7 +6338,7 @@ Lockfile:
       esrecurse "^4.1.0"
       estraverse "^4.1.1"
   
-  eslint-scope@^5.0.0, eslint-scope@^5.1.1:
+  eslint-scope@^5.1.1:
     version "5.1.1"
     resolved "https://registry.npm.taobao.org/eslint-scope/download/eslint-scope-5.1.1.tgz#e786e59a66cb92b3f6c1fb0d508aab174848f48c"
     integrity sha1-54blmmbLkrP2wfsNUIqrF0hI9Iw=
@@ -15057,7 +15006,7 @@ Lockfile:
     dependencies:
       tslib "^1.8.1"
   
-  tsutils@^3.17.1, tsutils@^3.21.0:
+  tsutils@^3.21.0:
     version "3.21.0"
     resolved "https://registry.npm.taobao.org/tsutils/download/tsutils-3.21.0.tgz?cache=0&sync_timestamp=1615138205781&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftsutils%2Fdownload%2Ftsutils-3.21.0.tgz#b48717d394cea6c1e096983eed58e9d61715b623"
     integrity sha1-tIcX05TOpsHglpg+7Vjp1hcVtiM=
@@ -15408,13 +15357,6 @@ Lockfile:
     version "0.6.0"
     resolved "https://registry.nlark.com/use-immer/download/use-immer-0.6.0.tgz#ca6aa5ade93018e2c65cf128d19ada54fc23f70d"
     integrity sha1-ymqlrekwGOLGXPEo0ZraVPwj9w0=
-  
-  use-subscription@1.5.1:
-    version "1.5.1"
-    resolved "https://registry.yarnpkg.com/use-subscription/-/use-subscription-1.5.1.tgz#73501107f02fad84c6dd57965beb0b75c68c42d1"
-    integrity sha512-Xv2a1P/yReAjAbhylMfFplFKj9GssgTwN7RlcTxBujFQcloStWNDQdc4g4NRWH9xS4i/FDk04vQBptAXoF3VcA==
-    dependencies:
-      object-assign "^4.1.1"
   
   use@^3.1.0:
     version "3.1.1"

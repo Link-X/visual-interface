@@ -9,7 +9,6 @@ const { Option } = Select
 
 const EditInput = (props) => {
     const { onChangeKeyArr } = useDesignState(props)
-    console.log('design')
     return (
         <div className="edit-input">
             <div className="edit-box_item eidt-box_title">

@@ -97,14 +97,14 @@ export default {
                 }
             ]
         }),
-        isDev &&
-            serve({
-                open: false,
-                contentBase: resolve('./test'),
-                host: 'localhost',
-                port: 3004
-            }),
-        !isDev && terser(),
+        // isDev &&
+        //     serve({
+        //         open: false,
+        //         contentBase: resolve('./test'),
+        //         host: 'localhost',
+        //         port: 3004
+        //     }),
+        // !isDev && terser(),
         {
             watch: {
                 include: 'src/**',
@@ -112,5 +112,5 @@ export default {
             }
         }
     ],
-    external: ['react', 'react-grid-layout', 'immer', 'use-immer']
+    external: ['react', 'react-grid-layout', 'immer', 'use-immer', "use-subscription"]
 }

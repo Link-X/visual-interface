@@ -23,10 +23,10 @@
         "build:cjs": "cross-env NODE_ENV=production rollup -c --environment MODULE:cjs"
     },
     "dependencies": {
-        "react": "^17.0.2",
+        "immer": "^9.0.5",
+        "react": "^17.0.0",
         "react-grid-layout": "^1.2.5",
         "use-immer": "^0.6.0",
-        "immer": "^9.0.5",
         "use-subscription": "1.5.1"
     },
     "browserslist": [
@@ -46,8 +46,8 @@
         "@rollup/plugin-alias": "^3.1.1",
         "@rollup/plugin-node-resolve": "^8.0.0",
         "@types/react": "^17.0.14",
-        "@typescript-eslint/eslint-plugin": "3.1.0",
-        "@typescript-eslint/parser": "3.1.0",
+        "@typescript-eslint/eslint-plugin": "^4.28.3",
+        "@typescript-eslint/parser": "^4.28.3",
         "babel-plugin-external-helpers": "^6.22.0",
         "babel-preset-latest": "^6.24.1",
         "core-js": "^3.15.2",
@@ -73,10 +73,10 @@
         "typescript-eslint": "0.0.1-alpha.0"
     },
     "peerDependencies": {
-        "react": ">=17.0.2",
-        "use-immer": ">=0.6.0",
         "immer": ">=9.0.5",
-        "use-subscription": ">=1.5.1"
+        "react": ">=17.0.0",
+        "use-immer": ">=0.6.0",
+        "use-subscription": "1.5.1"
     },
     "gitHead": "4a1a44a7a288e170b5791184ea3733f2635d2cc7"
 }
