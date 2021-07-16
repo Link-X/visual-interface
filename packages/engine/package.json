@@ -26,7 +26,8 @@
         "react": "^17.0.2",
         "react-grid-layout": "^1.2.5",
         "use-immer": "^0.6.0",
-        "immer": "^9.0.5"
+        "immer": "^9.0.5",
+        "use-subscription": "1.5.1"
     },
     "browserslist": [
         "> 1%",
@@ -74,7 +75,8 @@
     "peerDependencies": {
         "react": ">=17.0.2",
         "use-immer": ">=0.6.0",
-        "immer": ">=9.0.5"
+        "immer": ">=9.0.5",
+        "use-subscription": ">=1.5.1"
     },
     "gitHead": "4a1a44a7a288e170b5791184ea3733f2635d2cc7"
 }
