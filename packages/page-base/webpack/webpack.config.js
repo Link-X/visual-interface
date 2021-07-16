@@ -36,6 +36,11 @@ const cacheLoader = {
         cacheDirectory: '/node_modules/.cache/cache-loader'
     }
 }
+
+const cssInclude = [resolve('src')]
+if (process.env.NODE_ENV === 'dev') {
+    cssInclude.push(resolve('../engine/dist/style/index.css'))
+}
 module.exports = (webpackOptions) => {
     return smpWrap({
         mode: webpackOptions.mode,
@@ -103,12 +108,6 @@ module.exports = (webpackOptions) => {
                     ]
                 },
                 {
-                    test: /\.css$/,
-                    include: [resolve('src')],
-                    exclude: /(node_modules|\.module.css$)/,
-                    use: [cacheLoader, styleLoader, 'css-loader', 'postcss-loader']
-                },
-                {
                     test: /.less$/,
                     use: [
                         cacheLoader,
@@ -125,8 +124,14 @@ module.exports = (webpackOptions) => {
                 },
                 {
                     test: /.css$/,
-                    include: /node_modules/,
+                    include: /node_module/,
                     use: [styleLoader, 'css-loader']
+                },
+                {
+                    test: /.css$/,
+                    include: cssInclude,
+                    exclude: /(node_module|\.module.css$)/,
+                    use: [cacheLoader, styleLoader, 'css-loader', 'postcss-loader']
                 },
                 {
                     test: /\.(eot|otf|ttf|woff|woff2)$/,
@@ -145,7 +150,7 @@ module.exports = (webpackOptions) => {
                     ]
                 },
                 {
-                    test: /\.(png|jpg|gif|jpeg)$/,
+                    test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
                     use: ['file-loader']
                 },
                 {

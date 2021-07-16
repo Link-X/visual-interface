@@ -105,12 +105,12 @@ export default {
                 port: 3004
             }),
         !isDev && terser(),
-        isDev && {
+        {
             watch: {
                 include: 'src/**',
                 clearScreen: true
             }
         }
     ],
-    external: ['react']
+    external: ['react', 'react-grid-layout', 'immer', 'use-immer']
 }

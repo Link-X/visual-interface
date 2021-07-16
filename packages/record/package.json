@@ -1,24 +1,72 @@
 {
-    "name": "@visual-interface/record",
-    "version": "0.0.10",
-    "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
-    "keywords": [],
-    "author": "xudb <15555537368@163.com>",
-    "license": "ISC",
-    "main": "lib/record.js",
-    "directories": {
-        "lib": "lib",
-        "test": "__tests__"
-    },
-    "files": [
-        "lib"
-    ],
-    "publishConfig": {
-        "access": "public",
-        "registry": "https://registry.npmjs.org"
-    },
+    "name": "web-front-end-record",
+    "version": "0.0.1",
+    "description": "this is simpleness record in web-front-end-record project. 这是一个js性能和错误报告jsdk",
+    "main": "./index.js",
     "scripts": {
-        "test": "echo \"Error: run tests from root\" && exit 1"
+        "build:esm": "rollup -c --environment MODULE:esm",
+        "build:umd": "rollup -c --environment MODULE:umd",
+        "build:cjs": "rollup -c --environment MODULE:cjs",
+        "test": "jest"
     },
-    "gitHead": "4a1a44a7a288e170b5791184ea3733f2635d2cc7"
+    "publishConfig": {
+        "access": "public"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*./src/**/*.{js,ts,json}": [
+            "prettier --write"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Link-X/web-front-end-record.git"
+    },
+    "author": "xudb",
+    "keywords": [
+        "前端监控",
+        "错误监控",
+        "web监控",
+        "js错误监控",
+        "javaScript监控"
+    ],
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Link-X/web-front-end-record/issues"
+    },
+    "homepage": "https://github.com/Link-X/web-front-end-record#readme",
+    "devDependencies": {
+        "@babel/core": "^7.12.3",
+        "@babel/preset-env": "^7.12.1",
+        "@babel/preset-typescript": "^7.12.1",
+        "@rollup/plugin-alias": "^3.1.1",
+        "@typescript-eslint/eslint-plugin": "^4.5.0",
+        "@typescript-eslint/parser": "^4.5.0",
+        "D": "^1.0.0",
+        "babel-code-frame": "^6.26.0",
+        "babel-plugin-external-helpers": "^6.22.0",
+        "babel-preset-latest": "^6.24.1",
+        "core-js": "^3.6.5",
+        "eslint": "^7.11.0",
+        "eslint-config-standard-with-typescript": "^19.0.1",
+        "husky": "^4.3.0",
+        "jest": "^26.6.1",
+        "jsdom": "^16.4.0",
+        "lint-staged": "^10.4.2",
+        "prettier": "^2.1.2",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-json": "^4.0.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-terser": "^7.0.2",
+        "rollup-plugin-typescript2": "^0.28.0",
+        "ts-jest": "^26.4.3",
+        "ts-node": "^9.0.0",
+        "typescript": "^4.0.3",
+        "rollup": "^2.45.2"
+    },
+    "dependencies": {}
 }
