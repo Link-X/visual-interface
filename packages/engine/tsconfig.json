@@ -5,7 +5,7 @@
     "allowUnreachableCode": true,
     "allowUnusedLabels": false,
     "alwaysStrict": false,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "experimentalDecorators": true,
     "jsx": "react",
     "sourceMap": true,

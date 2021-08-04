@@ -27,7 +27,8 @@
         "react": "^17.0.0",
         "react-grid-layout": "^1.2.5",
         "use-immer": "^0.6.0",
-        "use-subscription": "1.5.1"
+        "use-subscription": "1.5.1",
+        "lodash.isequal": "^4.5.0"
     },
     "browserslist": [
         "> 1%",

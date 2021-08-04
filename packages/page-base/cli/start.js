@@ -1,13 +1,11 @@
+/* eslint-disable */
 const express = require('express')
 const path = require('path')
 const webpack = require('webpack')
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const webpackHotMiddleware = require('webpack-hot-middleware')
 const { createProxyMiddleware } = require('http-proxy-middleware')
-const fs = require('fs-extra')
 const argv = require('yargs').argv
-const bodyParse = require('body-parser')
-const chalk = require('chalk')
 
 const app = express()
 
@@ -15,7 +13,6 @@ const config = require('../webpack/webpack.dev.config.js')
 const runOpen = require('./run-open')
 const compiler = webpack(config)
 const commands = argv._ || []
-const resolve = (dir) => path.join(__dirname, '../', dir)
 
 const proxyConfig = {
     target: '/',
@@ -27,6 +24,7 @@ const proxyConfig = {
 }
 
 const port = process.env.port || '9088'
+const openUrl = `http://localhost:${port}`
 const middleware = webpackDevMiddleware(compiler, {
     publicPath: config.output.publicPath,
     silent: true,
@@ -42,6 +40,7 @@ middleware.waitUntilValid((error) => {
     if (commands[0] === 'start') {
         return
     }
+    console.log('地址: ', openUrl)
     // if (error.hasErrors()){
     //     return
     // }
@@ -79,8 +78,9 @@ app.listen(port, function(err) {
     if (err) {
         throw err
     }
-    runOpen(`http://localhost:${port}`, {
+    runOpen(openUrl, {
         openPage: '/',
         open: ['google chrome', '--incognito']
     })
 })
+/* eslint-disable no-new */
