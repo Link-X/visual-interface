@@ -1,26 +1,28 @@
-import React from 'react'
-import { CanvasBlock } from '@visual-interface/engine'
+import React, { useEffect } from 'react'
+import { observer } from 'mobx-react-lite'
+import { CanvasBlock, Side } from '@visual-interface/engine'
 import '@visual-interface/engine/dist/style/index.css'
 
-const Home = (): JSX.Element => {
+import { useStores } from '@/store'
+import datas from '@/materiel/data'
+
+const Home = observer((): JSX.Element => {
+    const { designStore } = useStores()
+
+    const dragEnd = (item: any) => {
+        console.log(item)
+    }
+
+    useEffect(() => {
+        designStore.setSide(datas)
+    }, [])
+
     return (
         <div>
-            <div
-                className="droppable-element"
-                draggable={true}
-                unselectable="on"
-                onDragStart={(e) => {
-                    e.dataTransfer.setData('text/plain', '')
-                }}
-                onDragEnd={(e) => {
-                    console.log(e)
-                }}
-            >
-                Droppable Element (Drag me!)
-            </div>
-            <CanvasBlock list={[]} />
+            <Side list={designStore.sideList} dragEnd={dragEnd} />
+            <CanvasBlock list={designStore.fieldList || []} onDrop={designStore.pushField} />
         </div>
     )
-}
+})
 
 export default Home

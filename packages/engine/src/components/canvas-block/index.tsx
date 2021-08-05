@@ -2,6 +2,7 @@ import React, { useEffect, useMemo } from 'react'
 import { Responsive, WidthProvider } from 'react-grid-layout'
 import isEqual from 'lodash.isequal'
 import { useImmer } from 'use-immer'
+import { observer } from 'mobx-react-lite'
 
 import dynamic from 'src/components/react-dynamic'
 import { useMount } from 'src/hooks'
@@ -14,7 +15,7 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive)
 
 const dynamicFunc = (type: string, path: string) => {
     return dynamic({
-        loader: async function() {
+        loader: async function () {
             try {
                 const { default: Component } = await import(`@/materiel/${type}`)
                 return (props: { [key: string]: any }) => {
@@ -45,21 +46,7 @@ const RenderDom = React.memo(
     }
 )
 
-interface propsListType {
-    x: number
-    y: number
-    h: number
-    w: number
-    viewPath: string
-    fieldType: string
-    fieldLabel: string
-    fieldKey: string
-}
-interface Iprops {
-    list: propsListType[]
-}
-
-export default (props: Iprops): JSX.Element => {
+export default observer((props: engine.canvasBlockIprops): JSX.Element => {
     const [state, setState] = useImmer({ mounted: false })
 
     const onLayoutChange = (layout, layouts) => {
@@ -67,7 +54,7 @@ export default (props: Iprops): JSX.Element => {
     }
 
     const onDrop = (layout, layoutItem, _event) => {
-        alert(`Dropped element props:\n${JSON.stringify(layoutItem, ['x', 'y', 'w', 'h'], 2)}`)
+        props?.onDrop(layoutItem)
     }
 
     useMount(() => {
@@ -75,6 +62,7 @@ export default (props: Iprops): JSX.Element => {
             draft.mounted = true
         })
     })
+
     return (
         <>
             <ResponsiveReactGridLayout
@@ -99,4 +87,4 @@ export default (props: Iprops): JSX.Element => {
             </ResponsiveReactGridLayout>
         </>
     )
-}
+})

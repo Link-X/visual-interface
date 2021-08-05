@@ -2,3 +2,10 @@
 node_modules
 dist
 !.eslintrc.js
+**/node_modules/
+**/lib/
+**/dist/
+**/public/
+**/static/
+packages/docs/
+

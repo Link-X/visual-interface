@@ -21,13 +21,13 @@ module.exports = defineConfig({
                 destructuring: 'all'
             }
         ],
-        // 'node/no-missing-import': [
-        //     'error',
-        //     {
-        //         allowModules: ['types', 'estree', 'testUtils', 'stylus'],
-        //         tryExtensions: ['.ts', '.js', '.jsx', '.tsx', '.d.ts']
-        //     }
-        // ],
+        'node/no-missing-import': [
+            'warn',
+            {
+                allowModules: ['types', 'estree', 'testUtils', 'stylus'],
+                tryExtensions: ['.ts', '.js', '.jsx', '.tsx', '.d.ts']
+            }
+        ],
         'node/no-missing-require': [
             'error',
             {
@@ -36,7 +36,6 @@ module.exports = defineConfig({
                 tryExtensions: ['.ts', '.js', '.jsx', '.tsx', '.d.ts']
             }
         ],
-        'node/no-missing-import': 'off',
         'node/no-deprecated-api': 'off',
         'node/no-unpublished-import': 'off',
         'node/no-unpublished-require': 'off',

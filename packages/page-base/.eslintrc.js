@@ -35,7 +35,10 @@ module.exports = {
         node: true
     },
     rules: {
+        '@typescript-eslint/space-before-function-paren': 0,
         '@typescript-eslint/no-var-requires': 0,
+        '@typescript-eslint/explicit-function-return-type': 0,
+        '@typescript-eslint/explicit-module-boundary-types': 0,
         '@typescript-eslint/promise-function-async': 0,
         'no-callback-literal': 0,
         '@typescript-eslint/indent': ['error', 4],

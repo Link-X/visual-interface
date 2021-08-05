@@ -16,7 +16,7 @@ import requireContext from 'rollup-plugin-require-context'
 
 const path = require('path')
 
-const resolve = function(...args) {
+const resolve = function (...args) {
     return path.resolve(__dirname, ...args)
 }
 const isDev = process.env.NODE_ENV === 'dev'
@@ -112,5 +112,5 @@ export default {
             }
         }
     ],
-    external: ['react', 'react-grid-layout', 'immer', 'use-immer', "use-subscription"]
+    external: ['react', 'react-grid-layout', 'immer', 'use-immer', 'use-subscription', 'mobx-react-lite']
 }
