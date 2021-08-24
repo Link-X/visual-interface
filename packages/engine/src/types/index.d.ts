@@ -23,6 +23,6 @@ declare namespace engine {
     }
     interface canvasBlockIprops {
         list: canvasBlockList[]
-        onDrop: (item: gridLayoutData) => void
+        onDrop: (layout: gridLayoutData[], item: gridLayoutData) => void
     }
 }

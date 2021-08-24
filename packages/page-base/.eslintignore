@@ -15,6 +15,6 @@ scripts
 
 postcss.config.js
 
-/bin
+/bin/*
 
-/cli
+/cli/*
