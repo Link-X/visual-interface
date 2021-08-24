@@ -1,5 +1,17 @@
-import React from 'react';
+import React from 'react'
+import { observer } from 'mobx-react-lite'
 
-export default () => {
-    return <div></div>
-}
+const Design = observer((props: engine.designIprops) => {
+    console.log(props)
+    const { activedItem } = props
+    return (
+        <div>
+            <div className="title">
+                {activedItem.fieldLabel}
+                {activedItem.i}
+            </div>
+        </div>
+    )
+})
+
+export default Design

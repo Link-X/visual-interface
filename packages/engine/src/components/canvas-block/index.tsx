@@ -58,6 +58,10 @@ export default observer(
             props?.onDrop(layout, layoutItem)
         }
 
+        const onClickItem = (item) => {
+            props?.onClickItem(item)
+        }
+
         useMount(() => {
             setState((draft) => {
                 draft.mounted = true
@@ -80,7 +84,12 @@ export default observer(
                 >
                     {props.list.map((v, i) => {
                         return (
-                            <div key={v.fieldKey}>
+                            <div
+                                key={v.fieldKey}
+                                onClick={() => {
+                                    onClickItem(v)
+                                }}
+                            >
                                 <RenderDom
                                     config={{
                                         index: i,

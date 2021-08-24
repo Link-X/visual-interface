@@ -8,6 +8,10 @@ declare namespace engine {
         dragEnd: (item: sideListType) => void
     }
 
+    interface designIprops {
+        activedItem: any
+    }
+
     interface gridLayoutData {
         x: number
         y: number
@@ -24,5 +28,6 @@ declare namespace engine {
     interface canvasBlockIprops {
         list: canvasBlockList[]
         onDrop: (layout: gridLayoutData[], item: gridLayoutData) => void
+        onClickItem: (item: gridLayoutData) => void
     }
 }

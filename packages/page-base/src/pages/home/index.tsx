@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { observer } from 'mobx-react-lite'
-import { CanvasBlock, Side } from '@visual-interface/engine'
+import { CanvasBlock, Side, Design } from '@visual-interface/engine'
 import '@visual-interface/engine/dist/style/index.css'
 
 import { useStores } from '@/store'
@@ -10,18 +10,19 @@ const Home = observer(
     (): JSX.Element => {
         const { designStore } = useStores()
 
-        const dragEnd = (item: any) => {
-            designStore.pushFieldList(item)
-        }
-
         useEffect(() => {
             designStore.setSide(datas)
         }, [])
 
         return (
             <div>
-                <Side list={designStore.sideList} dragEnd={dragEnd} />
-                <CanvasBlock list={designStore.fieldList || []} onDrop={designStore.setDragConfig} />
+                <Side list={designStore.sideList} dragEnd={designStore.pushFieldList} />
+                <CanvasBlock
+                    list={designStore.fieldList || []}
+                    onClickItem={designStore.onClickItem}
+                    onDrop={designStore.setDragConfig}
+                />
+                <Design activedItem={designStore.activedItem} />
             </div>
         )
     }

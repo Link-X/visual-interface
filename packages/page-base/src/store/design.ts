@@ -27,9 +27,9 @@ class engineStore {
             sideList: observable,
             fieldList: observable,
             setSide: action,
-            setActived: action,
             pushFieldList: action,
-            setDragConfig: action
+            setDragConfig: action,
+            onClickItem: action
         })
     }
 
@@ -47,26 +47,22 @@ class engineStore {
         this.sideList = list
     }
 
-    setActived = (item: any) => {
-        this.activedItem = item
-    }
-
     /** 新增field */
     pushFieldList = (item: any) => {
         this.fieldList = this.layout.map((v: any, index: number) => {
             const oldConfig = this.fieldList[index]
             if (!oldConfig) {
-                /** 如果原来没有则说明这个是新增的 */
+                /** 新增 */
                 return {
                     ...v,
                     viewPath: `@/materiel/${String(item.fieldType)}`,
                     fieldType: item.fieldType,
-                    fieldKey: `${index + 1}`,
-                    i: `${index + 1}`,
+                    fieldKey: `${index}`,
+                    i: `${index}`,
                     fieldLabel: item.fieldLabel
                 }
             }
-            /** 将拖动后的位置修改下 */
+            /** 拖动后位置同步 */
             return {
                 ...oldConfig,
                 ...v
@@ -74,9 +70,14 @@ class engineStore {
         })
     }
 
-    /** 保存拖动后所以位置的变化信息 */
+    /** 保存拖动后位置变化信息 */
     setDragConfig = (layout: any, config: any) => {
         this.layout = layout
+    }
+
+    /** 选中物料 */
+    onClickItem = (item: any) => {
+        this.activedItem = item
     }
 }
 
