@@ -1,6 +1,6 @@
 {
     "name": "@visual-interface/record",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "this is simpleness record in web-front-end-record project. 这是一个js性能和错误报告jsdk",
     "main": "./index.js",
     "scripts": {
